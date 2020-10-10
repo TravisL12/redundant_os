@@ -1,0 +1,51 @@
+.background-robot {
+  opacity: 0.3;
+  @include build-robot(300px, $color-1);
+}
+
+.window {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  resize: both;
+  overflow: scroll;
+  background: #eee;
+  box-shadow: -2px 2px 20px 5px $transparent-black;
+  border-radius: $desktop-border-radius;
+
+  &.active .window-title-bar {
+    background: #aaa;
+  }
+
+  .window-title-bar {
+    position: relative;
+    text-align: center;
+    background: #ddd;
+    padding: 6px 0;
+  }
+
+  .title {
+    font-weight: 800;
+    font-size: 14px;
+  }
+
+  .window-buttons {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    button {
+      height: 100%;
+      border: none;
+      background: none;
+    }
+  }
+
+  .window-body {
+    flex: 1;
+    overflow: scroll;
+  }
+}

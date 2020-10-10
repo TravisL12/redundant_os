@@ -1,0 +1,63 @@
+.menu-bar {
+  font-size: 1.4rem;
+  background: white;
+  padding: 0 10px;
+  border-top-left-radius: $desktop-border-radius;
+  border-top-right-radius: $desktop-border-radius;
+
+  .menu-item {
+    box-sizing: border-box;
+  }
+
+  .menu-title {
+    display: block;
+    position: relative;
+    padding: 3px 12px;
+  }
+
+  & > .main-menu {
+    display: flex;
+    z-index: 2;
+
+    &.show > .menu-item:hover {
+      .menu-title {
+        background: #eee;
+      }
+
+      & > .sub-menu {
+        display: block;
+      }
+    }
+
+    & > .menu-item {
+      position: relative;
+      z-index: 1;
+
+      & > .sub-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 100%;
+        box-shadow: -2px 2px 12px 0px $transparent-black;
+
+        .menu-item {
+          cursor: pointer;
+          background: rgba(235, 239, 241, 0.95);
+          width: 100%;
+          white-space: nowrap;
+          padding: 3px 20px;
+
+          &:hover {
+            background: $color-5;
+          }
+
+          &:last-child {
+            border-bottom-left-radius: $desktop-border-radius;
+            border-bottom-right-radius: $desktop-border-radius;
+          }
+        }
+      }
+    }
+  }
+}
