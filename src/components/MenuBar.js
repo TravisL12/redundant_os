@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { welcome, systemPreferences, apod } from "./WindowContents";
+import { welcome, systemPreferences, apod, codePens } from "./WindowContents";
 import { getCodePenWindows } from "../utils/codepen-utils";
 
 const menuItems = [
@@ -9,7 +9,7 @@ const menuItems = [
     items: [welcome, apod],
   },
   { title: "Code Pens", items: getCodePenWindows() },
-  { title: "Special", items: [systemPreferences] },
+  { title: "Special", items: [systemPreferences, codePens] },
 ];
 
 const MenuBar = ({ openWindow }) => {

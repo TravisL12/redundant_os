@@ -1,6 +1,7 @@
 import Welcome from "./Welcome";
-import SystemPreferences from "./Preferences/SystemPreferences";
+import SystemPreferences from "./Preferences";
 import Apod from "./Apod";
+import CodePens from "./CodePens";
 
 export const IFRAME_TYPE = "iframe";
 export const COMPONENT_TYPE = "component";
@@ -23,4 +24,10 @@ const systemPreferences = {
   content: { component: SystemPreferences },
 };
 
-export { welcome, apod, systemPreferences };
+const codePens = {
+  title: "Code Pens",
+  type: COMPONENT_TYPE,
+  content: { component: CodePens },
+};
+
+export { welcome, apod, systemPreferences, codePens };

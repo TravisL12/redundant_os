@@ -1,12 +1,10 @@
 import React, { createContext, useContext, useState } from "react";
-import { ThemeProvider } from "styled-components";
 import { orderWindows } from "../utils/windowUtils";
 import { welcome } from "./WindowContents";
 
-const ThemeToggleContext = createContext();
+const WindowManageContext = createContext();
 
-export const MyThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState({ color: "#46b78d" });
+export const WindowManagerProvider = ({ children }) => {
   const [windows, setWindows] = useState(orderWindows([welcome]));
 
   const openWindow = (newWindow) => {
@@ -35,17 +33,13 @@ export const MyThemeProvider = ({ children }) => {
     setWindows(newWindows);
   };
 
-  const updateTheme = (val) => {
-    setTheme(val);
-  };
-
   return (
-    <ThemeToggleContext.Provider
-      value={{ updateTheme, openWindow, closeWindow, updateWindowOrder }}
+    <WindowManageContext.Provider
+      value={{ windows, openWindow, closeWindow, updateWindowOrder }}
     >
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </ThemeToggleContext.Provider>
+      {children}
+    </WindowManageContext.Provider>
   );
 };
 
-export const useMyTheme = () => useContext(ThemeToggleContext);
+export const useWindowManager = () => useContext(WindowManageContext);
