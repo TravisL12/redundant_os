@@ -31,7 +31,7 @@ I went to my Scrape codepens: `https://codepen.io/TravisL12/pens/public?grid_typ
 - keeps track of which window is open
 - the window stack order (what's on top and active)
 
-### Content
+### Window Types
 
 - iframe
 - component
