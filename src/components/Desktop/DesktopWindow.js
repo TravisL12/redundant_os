@@ -1,6 +1,6 @@
 import React from "react";
 import Draggable from "react-draggable";
-import { IFRAME_TYPE, COMPONENT_TYPE } from "../WindowContents";
+import { IFRAME_TYPE, COMPONENT_TYPE } from "../windowContents";
 
 const DEFAULT_POSITION = 50;
 

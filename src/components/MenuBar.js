@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { welcome, systemPreferences, apod, codePens } from "./WindowContents";
+import { welcome, systemPreferences, apod, codePens } from "./windowContents";
 import { getCodePenWindows } from "../utils/codepen-utils";
 
 const menuItems = [

@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { orderWindows } from "../utils/windowUtils";
-import { welcome } from "./WindowContents";
+import { welcome } from "./windowContents";
 
 const ThemeToggleContext = createContext();
 
