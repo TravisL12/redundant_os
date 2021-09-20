@@ -1,7 +1,7 @@
 import React from "react";
-import DesktopWindow from "./DesktopWindow";
-
 import styled from "styled-components";
+
+import DesktopWindow from "./DesktopWindow";
 
 const DesktopWrapper = styled.div`
   position: relative;

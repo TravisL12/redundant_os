@@ -1,28 +1,13 @@
-import { IFRAME_TYPE } from "../components/windowContents";
+// Scrape codepens: https://codepen.io/your-work/?grid_type=list&cursor=ZD0xJm89MCZwPTEmdj01MDEwMzU0Ng==
+// last scraped: 9/20/2021
+// [...document.querySelectorAll(".title")].map((el) => {
+//   const title = el.title;
+//   const link = el.querySelector("a");
+//   const id = link.href.split("/").slice(-1)[0];
+//   return { title, id };
+// });
 
-export function getCodePenUrl(id) {
-  return `https://codepen.io/TravisL12/embed/${id}?height=265&theme-id=dark&default-tab=result`;
-}
-
-export function getCodePens() {
-  return pens.map(pen => ({ name: pen.name, url: getCodePenUrl(pen.id) }));
-}
-
-export function getCodePenWindows() {
-  return pens
-    .filter(({ show }) => show)
-    .map(pen => ({
-      title: pen.name,
-      type: IFRAME_TYPE,
-      content: {
-        name: pen.name,
-        url: getCodePenUrl(pen.id),
-        size: { width: "800px", height: "600px" },
-      },
-    }));
-}
-
-const pens = [
+export default [
   { name: "Analog Clock", id: "MWwZBgP", show: true },
   { name: "Bada-Boom", id: "RKOexP", show: false },
   {
@@ -167,4 +152,50 @@ const pens = [
   { name: "Walking Man", id: "XWrNyKB", show: true },
   { name: "Words disappear", id: "PeQVXz", show: true },
   { name: "WqomvM", id: "WqomvM", show: true },
+  { name: "parse RGB", id: "KKqadRW", show: false },
+  { name: "AnimationEnd", id: "poPmeaJ", show: false },
+  { name: "Fetch RSS", id: "MWmqzYm", show: false },
+  { name: "d3_barchart_02_title", id: "ExmYqbQ", show: false },
+  { name: "d3_barchart_01_initial", id: "QWvLXrR", show: false },
+  { name: "D3 Bar Chart", id: "YzZeJXO", show: false },
+  { name: "Chutes and Ladders", id: "abJJLWJ", show: false },
+  { name: "textarea replace", id: "GRWZrOG", show: false },
+  { name: "React Links", id: "eYvpXyg", show: false },
+  { name: "React ToDo", id: "dyvYYjQ", show: false },
+  { name: "Mock site", id: "LYWEMgZ", show: false },
+  { name: "Mock site", id: "ExWadRm", show: false },
+  { name: "canvas thumbs", id: "xxgoaaY", show: false },
+  { name: "wvgbQeE", id: "wvgbQeE", show: false },
+  { name: "Demo", id: "KKaNEgd", show: false },
+  { name: "svg lines", id: "abpmBbZ", show: false },
+  { name: "War!", id: "bGgexEa", show: false },
+  { name: "Brief layout", id: "xxRoERG", show: false },
+  { name: "Mouse Odometer", id: "RwoYQYY", show: false },
+  { name: "example layout", id: "dyOpMQO", show: false },
+  { name: "GRNqGdM", id: "GRNqGdM", show: false },
+  { name: "layout", id: "LYbGKEd", show: false },
+  { name: "Drop Cats", id: "wvoKYJO", show: false },
+  { name: "Spinning Cube No Robot", id: "GRNpdax", show: false },
+  { name: "table load", id: "yLVyNQp", show: false },
+  { name: "Link URLs OOJS", id: "gOLYNLG", show: false },
+  { name: "Simple grid", id: "BaLVLEm", show: false },
+  { name: "Calendar Picker", id: "dypJPzZ", show: false },
+  { name: "calculator", id: "ExgwZYY", show: false },
+  { name: "canvas grid", id: "ExgXMEW", show: false },
+  { name: "SVG gradient animation loop", id: "poEPwOR", show: false },
+  { name: "SVG Loader With Spinning Gradient", id: "VwKpoEa", show: false },
+  { name: "Timers", id: "RwGbpjL", show: false },
+  { name: "Shadows", id: "bGeJoJM", show: false },
+  { name: "Dot grid", id: "bGeMrxp", show: false },
+  { name: "rotate background", id: "vYKjJRM", show: false },
+  { name: "Simple Carousel Procedural", id: "Bazxyxj", show: false },
+  { name: "Simple Carousel OOP", id: "oNLqrpG", show: false },
+  { name: "Flexbox scroll", id: "oNLYZmg", show: false },
+  { name: "Happy Cake day!", id: "abZdPaB", show: false },
+  { name: "Quiz Game", id: "gOMpKqL", show: false },
+  { name: "easy month", id: "WNwEEyd", show: false },
+  { name: "Clicker evolution", id: "LYNyqyz", show: false },
+  { name: "Mousover image", id: "ZEWWjop", show: false },
+  { name: "Bowling", id: "yLOeOMd", show: false },
+  { name: "Loading example", id: "ZEWGEJo", show: false },
 ];

@@ -1,29 +1,15 @@
 import React, { useState } from "react";
 
-import {
-  welcome,
-  bouncingBalls,
-  systemPreferences,
-  apod,
-} from "./windowContents";
-import { getCodePenWindows } from "../utils/codepens";
+import { welcome, systemPreferences, apod } from "./windowContents";
+import { getCodePenWindows } from "../utils/codepen-utils";
 
 const menuItems = [
   {
     title: "File",
-    items: [bouncingBalls],
-  },
-  {
-    title: "Edit",
     items: [welcome, apod],
   },
-  {
-    title: "View",
-    items: [welcome, bouncingBalls],
-  },
-  { title: "Window", items: [welcome, bouncingBalls] },
-  { title: "Special", items: [welcome, systemPreferences] },
   { title: "Code Pens", items: getCodePenWindows() },
+  { title: "Special", items: [systemPreferences] },
 ];
 
 const MenuBar = ({ openWindow }) => {
