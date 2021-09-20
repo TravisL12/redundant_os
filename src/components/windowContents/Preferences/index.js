@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import BackgroundColor from "./BackgroundColor";
-import { useMyTheme } from "../../MyThemeProvider";
 import { SWindowWrapper, SIconFile, SIconsGrid } from "../styles";
 
 const SystemPreferences = () => {
-  const { updateTheme } = useMyTheme();
   const [currentPreference, setPreference] = useState();
 
   const preferences = [
-    { name: "Background", component: BackgroundColor, props: { updateTheme } },
-    { name: "Date & Time", component: BackgroundColor, props: { updateTheme } },
-    { name: "Displays", component: BackgroundColor, props: { updateTheme } },
-    { name: "General", component: BackgroundColor, props: { updateTheme } },
+    { name: "Background", component: BackgroundColor },
+    { name: "Date & Time", component: BackgroundColor },
+    { name: "Displays", component: BackgroundColor },
+    { name: "General", component: BackgroundColor },
   ];
 
   const iconGrid = (
@@ -29,7 +27,7 @@ const SystemPreferences = () => {
     const PrefComponent = currentPreference.component;
     return (
       <SWindowWrapper>
-        <PrefComponent {...currentPreference.props} />
+        <PrefComponent />
       </SWindowWrapper>
     );
   }

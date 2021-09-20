@@ -16,7 +16,7 @@ function buildBody({ type, content } = {}) {
           frameBorder="no"
           loading="lazy"
           allowtransparency="true"
-          allowFullScreen="true"
+          allowFullScreen={true}
         ></iframe>
       );
     case COMPONENT_TYPE:

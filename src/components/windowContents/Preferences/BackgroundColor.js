@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useMyTheme } from "../../MyThemeProvider";
 
 const ColorListItem = styled.li`
   cursor: pointer;
@@ -19,7 +20,8 @@ const ColorListItem = styled.li`
   }
 `;
 
-const BackgroundColor = ({ updateTheme }) => {
+const BackgroundColor = () => {
+  const { updateTheme } = useMyTheme();
   const colors = ["red", "lightgreen", "lightblue", "purple", "magenta"];
 
   return (
