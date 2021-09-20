@@ -51,6 +51,7 @@ const DesktopWindow = ({ windowContent, select, isActive, close }) => {
         className={`window ${isActive ? "active" : ""}`}
         onClick={() => select(id)}
         role="heading"
+        aria-level="1"
         aria-hidden="true"
         style={style}
       >

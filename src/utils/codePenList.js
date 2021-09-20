@@ -7,8 +7,16 @@
 //   return { title, id };
 // });
 
-export default [
-  { name: "Analog Clock", id: "MWwZBgP", show: true },
+// categories
+const UTILITIES = "utilities";
+const GAMES = "games";
+const GRAPHS = "graphs";
+const ARTISTIC = "artistic";
+
+export const CODE_PEN_CATEGORIES = [UTILITIES, GAMES, GRAPHS, ARTISTIC];
+
+const codePenList = [
+  { name: "Analog Clock", id: "MWwZBgP", show: true, category: UTILITIES },
   { name: "Bada-Boom", id: "RKOexP" },
   {
     name: "Ball bouncing canvas",
@@ -24,7 +32,7 @@ export default [
   { name: "Blogger 5000", id: "LWrENq", show: true },
   { name: "calculate", id: "ewKxVg", show: true },
   { name: "Card Board", id: "rodLgL" },
-  { name: "Carousel", id: "RwWpWMj" },
+  { name: "Carousel", id: "RwWpWMj", category: UTILITIES },
   { name: "Cat carousel", id: "ZEQoXZb" },
   { name: "Centering nav", id: "bYXOpO" },
   {
@@ -34,10 +42,10 @@ export default [
   },
 
   { name: "cities", id: "omRKgy" },
-  { name: "Clocks!", id: "zjVZOM", show: true },
+  { name: "Clocks!", id: "zjVZOM", show: true, category: UTILITIES },
   { name: "Coin toss", id: "LwRVPb" },
   { name: "Color compare", id: "mgvqyL", show: true },
-  { name: "Connect 4!", id: "bGdrOxq", show: true },
+  { name: "Connect 4!", id: "bGdrOxq", show: true, category: GAMES },
   { name: "Create form", id: "NBbwGR" },
   {
     name: "CSS Digital Hex Clock",
@@ -50,8 +58,8 @@ export default [
   },
   { name: "d3 stuff", id: "wEvywB" },
   { name: "date ranges", id: "QWyWXxE" },
-  { name: "Dice game", id: "abvWYEo" },
-  { name: "Drop7", id: "zYGRWMO", show: true },
+  { name: "Dice game", id: "abvWYEo", category: GAMES },
+  { name: "Drop7", id: "zYGRWMO", show: true, category: GAMES },
   { name: "Ellipse animate", id: "MaWmbo" },
   { name: "Etch a sketch", id: "QWjOEGy" },
   { name: "Faded border", id: "ybOjNb" },
@@ -79,7 +87,7 @@ export default [
   },
   { name: "List layout", id: "eYmjEZB" },
   { name: "Loading border", id: "eweEPK" },
-  { name: "Memory game", id: "KKdpyer", show: true },
+  { name: "Memory game", id: "KKdpyer", show: true, category: GAMES },
   { name: "Menu thing", id: "gOYLwbX" },
   { name: "New Loader", id: "xegmRY", show: true },
   { name: "NWWYjLa", id: "NWWYjLa" },
@@ -119,16 +127,17 @@ export default [
     name: "square switchy thingy",
     id: "xgBozg",
   },
-  { name: "Stars", id: "NjVLLO", show: true },
+  { name: "Stars", id: "NjVLLO", show: true, category: ARTISTIC },
   { name: "Stopwatch", id: "KrGBdJ", show: true },
   {
     name: "Temperature converter",
     id: "bygWeO",
     show: true,
+    category: UTILITIES,
   },
   { name: "Text Mask", id: "arYrMw" },
-  { name: "The Moon", id: "zwXjaB", show: true },
-  { name: "The Sun", id: "BRbZQd", show: true },
+  { name: "The Moon", id: "zwXjaB", show: true, category: ARTISTIC },
+  { name: "The Sun", id: "BRbZQd", show: true, category: ARTISTIC },
   { name: "Top Secret info", id: "JjjvGVL" },
   { name: "Tripshit", id: "GPBEPr" },
   { name: "URL qs", id: "PoPJxpo" },
@@ -137,16 +146,16 @@ export default [
     id: "pogvweg",
   },
   { name: "vpoLdE", id: "vpoLdE" },
-  { name: "Walking Man", id: "XWrNyKB", show: true },
+  { name: "Walking Man", id: "XWrNyKB", show: true, category: ARTISTIC },
   { name: "Words disappear", id: "PeQVXz", show: true },
   { name: "WqomvM", id: "WqomvM", show: true },
   { name: "parse RGB", id: "KKqadRW" },
   { name: "AnimationEnd", id: "poPmeaJ" },
   { name: "Fetch RSS", id: "MWmqzYm" },
-  { name: "d3_barchart_02_title", id: "ExmYqbQ" },
-  { name: "d3_barchart_01_initial", id: "QWvLXrR" },
+  { name: "d3_barchart_02_title", id: "ExmYqbQ", category: GRAPHS },
+  { name: "d3_barchart_01_initial", id: "QWvLXrR", category: GRAPHS },
   { name: "D3 Bar Chart", id: "YzZeJXO" },
-  { name: "Chutes and Ladders", id: "abJJLWJ" },
+  { name: "Chutes and Ladders", id: "abJJLWJ", category: GAMES },
   { name: "textarea replace", id: "GRWZrOG" },
   { name: "React Links", id: "eYvpXyg" },
   { name: "React ToDo", id: "dyvYYjQ" },
@@ -155,24 +164,24 @@ export default [
   { name: "canvas thumbs", id: "xxgoaaY" },
   { name: "wvgbQeE", id: "wvgbQeE" },
   { name: "Demo", id: "KKaNEgd" },
-  { name: "svg lines", id: "abpmBbZ" },
-  { name: "War!", id: "bGgexEa" },
+  { name: "svg lines", id: "abpmBbZ", category: ARTISTIC },
+  { name: "War!", id: "bGgexEa", category: GAMES },
   { name: "Brief layout", id: "xxRoERG" },
-  { name: "Mouse Odometer", id: "RwoYQYY" },
+  { name: "Mouse Odometer", id: "RwoYQYY", category: ARTISTIC },
   { name: "example layout", id: "dyOpMQO" },
   { name: "GRNqGdM", id: "GRNqGdM" },
   { name: "layout", id: "LYbGKEd" },
   { name: "Drop Cats", id: "wvoKYJO" },
-  { name: "Spinning Cube No Robot", id: "GRNpdax" },
+  { name: "Spinning Cube No Robot", id: "GRNpdax", category: ARTISTIC },
   { name: "table load", id: "yLVyNQp" },
   { name: "Link URLs OOJS", id: "gOLYNLG" },
   { name: "Simple grid", id: "BaLVLEm" },
-  { name: "Calendar Picker", id: "dypJPzZ" },
-  { name: "calculator", id: "ExgwZYY" },
+  { name: "Calendar Picker", id: "dypJPzZ", category: UTILITIES },
+  { name: "calculator", id: "ExgwZYY", category: UTILITIES },
   { name: "canvas grid", id: "ExgXMEW" },
   { name: "SVG gradient animation loop", id: "poEPwOR" },
   { name: "SVG Loader With Spinning Gradient", id: "VwKpoEa" },
-  { name: "Timers", id: "RwGbpjL" },
+  { name: "Timers", id: "RwGbpjL", category: UTILITIES },
   { name: "Shadows", id: "bGeJoJM" },
   { name: "Dot grid", id: "bGeMrxp" },
   { name: "rotate background", id: "vYKjJRM" },
@@ -180,10 +189,12 @@ export default [
   { name: "Simple Carousel OOP", id: "oNLqrpG" },
   { name: "Flexbox scroll", id: "oNLYZmg" },
   { name: "Happy Cake day!", id: "abZdPaB" },
-  { name: "Quiz Game", id: "gOMpKqL" },
+  { name: "Quiz Game", id: "gOMpKqL", category: GAMES },
   { name: "easy month", id: "WNwEEyd" },
   { name: "Clicker evolution", id: "LYNyqyz" },
   { name: "Mousover image", id: "ZEWWjop" },
-  { name: "Bowling", id: "yLOeOMd" },
+  { name: "Bowling", id: "yLOeOMd", category: GAMES },
   { name: "Loading example", id: "ZEWGEJo" },
 ];
+
+export default codePenList;

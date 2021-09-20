@@ -1,12 +1,12 @@
 import { IFRAME_TYPE } from "../components/WindowContents";
-import pens from "./codepens";
+import codePenList from "./codePenList";
 
 export function getCodePenUrl(id) {
   return `https://codepen.io/TravisL12/embed/${id}?height=265&theme-id=dark&default-tab=result`;
 }
 
 export function getCodePenWindows() {
-  return pens
+  return codePenList
     .filter((pen) => pen.show)
     .map((pen) => ({
       title: pen.name,

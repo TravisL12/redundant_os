@@ -1,13 +1,9 @@
-import React, { useMemo } from "react";
-import { getCodePenWindows } from "../../../utils/codepen-utils";
+import React from "react";
 import { useWindowManager } from "../../WindowManagerProvider";
 import { SWindowWrapper, SIconFile, SIconsGrid } from "../styles";
 
-const CodePens = () => {
+const CodePens = ({ pens }) => {
   const { openWindow } = useWindowManager();
-  const codePens = useMemo(getCodePenWindows, []);
-
-  const pens = codePens.slice(0, 20);
 
   return (
     <SWindowWrapper>
