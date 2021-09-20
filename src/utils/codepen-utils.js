@@ -1,4 +1,4 @@
-import { IFRAME_TYPE } from "../components/windowContents";
+import { IFRAME_TYPE } from "../components/WindowContents";
 import pens from "./codepens";
 
 export function getCodePenUrl(id) {

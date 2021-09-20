@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { useMyTheme } from "../MyThemeProvider";
+import { useMyTheme } from "../../MyThemeProvider";
 
 const PreferencesWrapper = styled.div`
   height: 100%;

@@ -1,5 +1,5 @@
 import Welcome from "./Welcome";
-import SystemPreferences from "./SystemPreferences";
+import SystemPreferences from "./Preferences/SystemPreferences";
 import Apod from "./Apod";
 
 export const IFRAME_TYPE = "iframe";

@@ -1,6 +1,6 @@
 import React from "react";
 import Draggable from "react-draggable";
-import { IFRAME_TYPE, COMPONENT_TYPE } from "../windowContents";
+import { IFRAME_TYPE, COMPONENT_TYPE } from "../WindowContents";
 
 const DEFAULT_POSITION = 50;
 
@@ -28,11 +28,11 @@ function buildBody({ type, content } = {}) {
   }
 }
 
-const DesktopWindow = ({ window, select, isActive, close }) => {
-  const { id, sort, title, content } = window;
+const DesktopWindow = ({ windowContent, select, isActive, close }) => {
+  const { id, sort, title, content } = windowContent;
   const defaultPosition = DEFAULT_POSITION * (id + 1);
 
-  const windowBody = buildBody(window);
+  const windowBody = buildBody(windowContent);
   let style = { zIndex: sort };
   if (content?.size) {
     style = { ...style, ...content.size };

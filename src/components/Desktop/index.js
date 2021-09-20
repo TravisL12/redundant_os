@@ -16,11 +16,11 @@ const DesktopWrapper = styled.div`
 const Desktop = ({ windows, closeWindow, updateWindowOrder }) => {
   return (
     <DesktopWrapper>
-      {windows.map((window) => (
+      {windows.map((windowContent) => (
         <DesktopWindow
-          key={`window-${window.id}`}
-          window={window}
-          isActive={window.sort === windows.length - 1}
+          key={`window-${windowContent.id}`}
+          windowContent={windowContent}
+          isActive={windowContent.sort === windows.length - 1}
           select={updateWindowOrder}
           close={closeWindow}
         />

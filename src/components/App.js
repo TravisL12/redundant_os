@@ -5,7 +5,7 @@ import MenuBar from "./MenuBar";
 import Desktop from "./Desktop/index";
 import "../styles/application.scss";
 import { orderWindows } from "../utils/windowUtils";
-import { welcome } from "./windowContents/";
+import { welcome } from "./WindowContents/";
 
 function App() {
   const [windows, setWindows] = useState(orderWindows([welcome]));
