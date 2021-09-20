@@ -1,5 +1,5 @@
 import React from "react";
-import DesktopWindow from "./desktopWindow";
+import DesktopWindow from "./DesktopWindow";
 
 import styled from "styled-components";
 
@@ -16,7 +16,7 @@ const DesktopWrapper = styled.div`
 const Desktop = ({ windows, closeWindow, updateWindowOrder }) => {
   return (
     <DesktopWrapper>
-      {windows.map(window => (
+      {windows.map((window) => (
         <DesktopWindow
           key={`window-${window.id}`}
           window={window}

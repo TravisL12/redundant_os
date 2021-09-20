@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { MyThemeProvider } from './MyThemeProvider';
-import MenuBar from './menu-bar';
-import Desktop from './desktop';
-import '../styles/application.scss';
-import { orderWindows } from '../utils/windowUtils';
-import { welcome } from './windowContents/';
+import { MyThemeProvider } from "./MyThemeProvider";
+import MenuBar from "./MenuBar";
+import Desktop from "./Desktop/index";
+import "../styles/application.scss";
+import { orderWindows } from "../utils/windowUtils";
+import { welcome } from "./windowContents/";
 
 function App() {
   const [windows, setWindows] = useState(orderWindows([welcome]));

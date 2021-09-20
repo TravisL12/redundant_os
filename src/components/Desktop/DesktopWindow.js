@@ -1,6 +1,6 @@
 import React from "react";
 import Draggable from "react-draggable";
-import { IFRAME_TYPE, COMPONENT_TYPE } from "./windowContents";
+import { IFRAME_TYPE, COMPONENT_TYPE } from "../windowContents";
 
 const DEFAULT_POSITION = 50;
 
@@ -58,7 +58,7 @@ const DesktopWindow = ({ window, select, isActive, close }) => {
           <div className="window-buttons">
             <button
               className="close"
-              onClick={event => {
+              onClick={(event) => {
                 event.stopPropagation();
                 close(id);
               }}

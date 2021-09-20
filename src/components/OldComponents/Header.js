@@ -1,13 +1,13 @@
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 
-import React from "react"
+import React from "react";
 
-import GithubSocialMediaLogo from "../images/social/iconfinder_github_317712.svg"
-import OnlineSocialMediaTwitter from "../images/social/iconfinder_twitter_317720.svg"
-import OnlineSocialMediaLinkedIn from "../images/social/iconfinder_square-linkedin_317725.svg"
-import CodePenIcon from "../images/social/codepen_logo.svg"
-import ResumeIcon from "../images/social/resume_logo.svg"
-import RobotCube from "./robot-head"
+import GithubSocialMediaLogo from "../images/social/iconfinder_github_317712.svg";
+import OnlineSocialMediaTwitter from "../images/social/iconfinder_twitter_317720.svg";
+import OnlineSocialMediaLinkedIn from "../images/social/iconfinder_square-linkedin_317725.svg";
+import CodePenIcon from "../images/social/codepen_logo.svg";
+import ResumeIcon from "../images/social/resume_logo.svg";
+import RobotCube from "../robot-head";
 
 const Header = () => {
   const socialLinks = [
@@ -27,7 +27,7 @@ const Header = () => {
       url: "https://www.linkedin.com/in/travis-lawrence-b77400b8",
     },
     { name: "Codepen", icon: CodePenIcon, url: "https://codepen.io/travisl12" },
-  ]
+  ];
 
   return (
     <div className="header">
@@ -60,7 +60,7 @@ const Header = () => {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

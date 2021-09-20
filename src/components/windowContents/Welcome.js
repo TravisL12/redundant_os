@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { RobotHead } from "../robot-head";
+import { RobotHead } from "../OldComponents/RobotCube";
 import { buildRobot } from "../../styles/build_robot_mixin";
 
 const WelcomeWrapper = styled.div`
