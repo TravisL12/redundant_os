@@ -6,15 +6,13 @@ export function getCodePenUrl(id) {
 }
 
 export function getCodePenWindows(list = codePenList) {
-  return list
-    .filter((pen) => pen.show)
-    .map((pen) => ({
-      title: pen.name,
-      type: IFRAME_TYPE,
-      content: {
-        name: pen.name,
-        url: getCodePenUrl(pen.id),
-        size: { width: "800px", height: "600px" },
-      },
-    }));
+  return list.map((pen) => ({
+    title: pen.name,
+    type: IFRAME_TYPE,
+    content: {
+      name: pen.name,
+      url: getCodePenUrl(pen.id),
+      size: { width: "800px", height: "600px" },
+    },
+  }));
 }

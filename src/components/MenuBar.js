@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 
 import { welcome, systemPreferences, apod, codePens } from "./windowContents";
-import { getCodePenWindows } from "../utils/codepen-utils";
 
 const menuItems = [
   {
     title: "File",
     items: [welcome, apod],
   },
-  { title: "Code Pens", items: getCodePenWindows() },
-  { title: "Special", items: [systemPreferences, codePens] },
+  { title: "Code Pens", items: codePens },
+  { title: "Special", items: [systemPreferences] },
 ];
 
 const MenuBar = ({ openWindow }) => {
