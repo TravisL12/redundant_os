@@ -1,7 +1,8 @@
-import Welcome from "./Welcome";
+import Welcome from "./Apps/Welcome";
 import SystemPreferences from "./Preferences";
-import Apod from "./Apod";
+import Apod from "./Apps/Apod";
 import CodePens from "./CodePens";
+import { codePensByCategory, UTILITIES } from "../../utils/codePenList";
 
 export const IFRAME_TYPE = "iframe";
 export const COMPONENT_TYPE = "component";
@@ -24,10 +25,11 @@ const systemPreferences = {
   content: { component: SystemPreferences },
 };
 
+const pensByCategory = codePensByCategory();
 const codePens = {
   title: "Code Pens",
   type: COMPONENT_TYPE,
-  content: { component: CodePens },
+  content: { component: CodePens, props: { pens: pensByCategory[UTILITIES] } },
 };
 
 export { welcome, apod, systemPreferences, codePens };

@@ -2,15 +2,20 @@ import React, { useState } from "react";
 import BackgroundColor from "./BackgroundColor";
 import { SWindowWrapper, SIconFile, SIconsGrid } from "../styles";
 
-const SystemPreferences = () => {
-  const [currentPreference, setPreference] = useState();
+/**
+ * this is a self-confined file window where the content
+ * replaces the previous content (i.e. doesn't open a new window).
+ */
 
-  const preferences = [
-    { name: "Background", component: BackgroundColor },
-    { name: "Date & Time", component: BackgroundColor },
-    { name: "Displays", component: BackgroundColor },
-    { name: "General", component: BackgroundColor },
-  ];
+const defaultPreferences = [
+  { name: "Background", component: BackgroundColor },
+  { name: "Date & Time", component: BackgroundColor },
+  { name: "Displays", component: BackgroundColor },
+  { name: "General", component: BackgroundColor },
+];
+
+const SystemPreferences = ({ preferences = defaultPreferences }) => {
+  const [currentPreference, setPreference] = useState();
 
   const iconGrid = (
     <SIconsGrid>

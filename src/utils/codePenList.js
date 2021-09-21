@@ -8,12 +8,21 @@
 // });
 
 // categories
-const UTILITIES = "utilities";
-const GAMES = "games";
-const GRAPHS = "graphs";
-const ARTISTIC = "artistic";
+export const UTILITIES = "utilities";
+export const GAMES = "games";
+export const GRAPHS = "graphs";
+export const ARTISTIC = "artistic";
 
 export const CODE_PEN_CATEGORIES = [UTILITIES, GAMES, GRAPHS, ARTISTIC];
+
+export function codePensByCategory() {
+  return CODE_PEN_CATEGORIES.reduce((acc, category) => {
+    acc[category] = codePenList.filter(
+      (pen) => pen.show && pen.category === category
+    );
+    return acc;
+  }, {});
+}
 
 const codePenList = [
   { name: "Analog Clock", id: "MWwZBgP", show: true, category: UTILITIES },
